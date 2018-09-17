@@ -69,7 +69,7 @@
                 style="@style/StarRatingBars"
                 android:layout_width="wrap_content"
                 android:layout_height="15dp"
-                android:rating="4"
+                android:rating="5"
                 android:isIndicator="true"/>
 
             <TextView
