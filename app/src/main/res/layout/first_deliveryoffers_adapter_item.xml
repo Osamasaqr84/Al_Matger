@@ -100,7 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="14dp"
+            android:textSize="15dp"
             android:textColor="#4A4A4A"
             android:layout_marginRight="2dp"
             android:text="تعليقات المندوب"
