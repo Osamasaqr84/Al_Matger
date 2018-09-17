@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data class ="DepartBinding3">
+        <variable
+            name="departmentmodel"
+            type="com.example.hossam.al_matger.HomeActivity3.ViewModel.DepartmentViewModel"/>
+    </data>
+
+
+<LinearLayout
+    android:id="@+id/doctorlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home3_dept_background"
+    android:layout_margin="5dp"
+    android:shadowColor="#FDF4F7"
+    android:shadowRadius="5"
+    android:shadowDx="2"
+    android:elevation="17dp"
+    android:shadowDy="2"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/doctorimage"
+        android:layout_width="80dp"
+        android:maxWidth="90dp"
+        android:layout_margin="5dp"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pharm2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/color"
+            />
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/color"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/doctorname"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical|center"
+        android:textSize="16dp"
+        android:text="@{departmentmodel.name}"
+        />
+
+</LinearLayout>
+
+</layout>

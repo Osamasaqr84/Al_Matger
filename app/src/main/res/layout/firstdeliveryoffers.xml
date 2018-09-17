@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_home3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+  >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_for_deliveryoffers"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/account_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layoutDirection="locale"
+            android:orientation="horizontal"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

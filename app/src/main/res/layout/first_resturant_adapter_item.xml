@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class ="ResturantMenu1Binding">
+        <variable
+            name="resturantlistmodel"
+            type="com.example.hossam.al_matger.FirstResturantList.ViewModel.Resturant_list_ItemViewModel"/>
+    </data>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="17dp"
+    android:clipToPadding="false"
+    android:shadowColor="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        android:elevation="17dp"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:background="@drawable/back1_resturant"
+            android:text="@{resturantlistmodel.name}"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bizza"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="6"
+            android:background="@drawable/back2_resturant"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1.8"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="@{resturantlistmodel.place}"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY"
+                    android:layout_margin="3dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/map"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1.8"
+                android:gravity="center"
+
+                android:layout_height="wrap_content">
+
+                <RatingBar
+                    android:id="@+id/rates"
+                    style="@style/StarRatingBars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:rating="4"
+                    android:isIndicator="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:text="@{resturantlistmodel.commentcounter}"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/comment"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:text="@{resturantlistmodel.likecounter}"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/like"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="35dp"
+        android:layout_width="100dp"
+        android:layout_marginStart="45dp"
+        android:padding="4dp"
+        android:background="@drawable/rest_logo_back"
+        android:src="@drawable/pizzalogo"
+        android:layout_height="100dp"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="85dp"
+        android:layout_height="wrap_content">
+
+            <ImageView
+            android:layout_width="35dp"
+            android:layout_height="65dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/view11"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/view22"/>
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
+</layout>

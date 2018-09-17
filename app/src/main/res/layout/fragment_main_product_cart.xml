@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/lineview"
+            />
+        <LinearLayout
+            android:id="@+id/head1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl"
+            android:weightSum="7">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="23dp"
+                android:layout_weight="2.5"
+                android:layout_gravity="center"
+                android:src="@drawable/view1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متجر الاحلام"
+                android:gravity="center_horizontal"
+                android:textSize="16dp"
+                android:layout_weight="2"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="23dp"
+                android:layout_weight="2.5"
+                android:layout_gravity="center"
+                android:src="@drawable/view2"
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/lineview"
+            />
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:layout_margin="7dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/linear_background_for_subcat"
+            app:layout_constraintTop_toTopOf="@+id/head1" >
+
+
+            <RelativeLayout
+                android:layout_width="42dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="-10dp">
+
+
+            <ImageView
+                android:layout_width="@dimen/imagefooterwidth"
+                android:layout_height="@dimen/imagefooterheight"
+                android:background="@drawable/order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="3dp"
+                android:gravity="center"
+                android:text="55"
+                android:textColor="@color/white"
+                android:textSize="8dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="اجمالي ثمن المنتجات:"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_numbers"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10500"
+                    android:layout_marginStart="5dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_numbers"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ريال "
+                    android:layout_marginStart="5dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_numbers"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/st2"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="تأكيد"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/sure_back"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/recylerview">
+
+    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

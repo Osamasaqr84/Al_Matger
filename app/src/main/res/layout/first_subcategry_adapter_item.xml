@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class ="SubCategry1Binding">
+        <variable
+            name="subCategrymodel"
+            type="com.example.hossam.al_matger.FirstSubCategry.ViewModel.SubCat_ItemViewModel"/>
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/linear_background_for_subcat"
+    android:weightSum="5"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_weight="2">
+        
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="140dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@drawable/mobile"/>
+
+        <LinearLayout
+            android:id="@+id/ratlin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <RatingBar
+                android:id="@+id/rates"
+                style="@style/StarRatingBars"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:rating="5"
+                android:isIndicator="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:text="("
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/customer_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{subCategrymodel.ratecount}"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=")"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="200dp"
+        android:background="#D9D9D9"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="#4A4A4A"
+            android:text="@{subCategrymodel.name}"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="5"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{subCategrymodel.price}"
+                android:textSize="14dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="end"
+                android:textColor="#4A4A4A"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شحن مجاني من المتجر "
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_gravity="start"
+                android:background="@drawable/salefromstor_back"
+                android:padding="2dp"
+                android:layout_weight="2.8"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#D9D9D9"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="أضف للسلة"
+                android:lines="1"
+                android:drawableStart="@drawable/cart"
+                android:layout_marginStart="50dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:background="@drawable/addtocart_back"
+                android:paddingRight="17dp"
+                android:paddingLeft="17dp"
+               />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</layout>

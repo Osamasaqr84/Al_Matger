@@ -1,0 +1,525 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="55dp"
+    android:layout_height="match_parent"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/lineview"
+            />
+        <LinearLayout
+            android:id="@+id/head1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl"
+            android:weightSum="7">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="23dp"
+                android:layout_weight="2.5"
+                android:layout_gravity="center"
+                android:src="@drawable/view1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قسم المطاعم"
+                android:gravity="center_horizontal"
+                android:textSize="16dp"
+                android:layout_weight="2"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="23dp"
+                android:layout_weight="2.5"
+                android:layout_gravity="center"
+                android:src="@drawable/view2"
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@drawable/lineview"
+            />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:layout_marginStart="3dp"
+                    android:gravity="center"
+                    android:layoutDirection="rtl"
+                    android:background="@drawable/linear_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:background="@drawable/linear_background"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/next"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/next" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                  >
+                </android.support.v4.view.ViewPager>
+
+                <ImageView
+                    android:id="@+id/prev"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/prev" />
+
+            </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="7dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="start"
+                android:src="@drawable/search"
+                android:layout_margin="7dp"
+                />
+
+            </LinearLayout>
+
+                </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layoutManager="LinearLayoutManager"
+                    android:id="@+id/recylerviewimages"/>
+
+                <ImageView
+                    android:id="@+id/showmore"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/more_img"/>
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:background="@drawable/linear_background"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="9dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:text="هواوي نوفا  i3بشريحتي اتصال "
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ratlin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <RatingBar
+                        android:id="@+id/rates"
+                        style="@style/StarRatingBars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:rating="5"
+                        android:isIndicator="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:text="("
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/customer_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="122"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=")"
+                        android:textColor="@color/gray" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/color"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:textSize="14dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_marginEnd="9dp"
+                    android:textColor="@color/black"
+                    android:text="5.849.00 ريال"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="شحن مجاني من المتجر "
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/salefromstor_back"
+                    android:padding="2dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/linear_background"
+            android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="9dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/textcolorinnenu"
+                    android:text="اختر لون المنتج "
+                    />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/pink"
+            />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:orientation="horizontal"
+                app:layoutManager="LinearLayoutManager"
+                android:id="@+id/recylerviewcolors">
+            </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/linear_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:textColor="@color/textcolorinnenu"
+                android:text="سعة التخزين "
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pink"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:orientation="horizontal"
+                app:layoutManager="LinearLayoutManager"
+                android:id="@+id/recylerviewstorage">
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/linear_background"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:textColor="@color/textcolorinnenu"
+                android:text="الوصف "
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pink"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="5dp"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:textColor="@color/textcolorinnenu"
+                android:text="يحتوي هاتف انفنكس علي شاشة لمس تكاثفية حجمها 5.5 انش ومذودة ومذودة بتقنية اي بي سي"
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/linear_background"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:textColor="@color/textcolorinnenu"
+                android:text="مواصفات المنتج :"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/pink"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lines="3"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:textColor="@color/textcolorinnenu"
+               android:text="دقة الكاميرا 5 ميجا بكسل"
+                />
+
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/gotodet"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:src="@drawable/prev" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/linear_background"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:textColor="@color/textcolorinnenu"
+                android:text="اسم الماركة"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="9dp"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:textColor="@color/textcolorinnenu"
+                android:text="اسم المتجر "
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginBottom="7dp"
+                android:layout_marginStart="45dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="9dp"
+                    android:textSize="16dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/textcolorinnenu"
+                    android:text="هواوي"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="9dp"
+                    android:textSize="16dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/textcolorinnenu"
+                    android:text="متجر الاحلام  "
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="7dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="أضف للسلة "
+                android:lines="1"
+                android:layout_marginRight="90dp"
+                android:layout_marginLeft="90dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/cart"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:background="@drawable/addtocart_back"
+                android:paddingRight="27dp"
+                android:paddingLeft="27dp"
+                />
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

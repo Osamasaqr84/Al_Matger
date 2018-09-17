@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data class="OfferDataPinding4">
+        <variable
+            name="offersmodel"
+            type="com.example.hossam.al_matger.HomeActivity4.ViewModel.OffersViewModel"/>
+    </data>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="150dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="25dp"
+        android:padding="5dp"
+        android:background="@drawable/home1_dept_background"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="155dp"
+                android:layout_height="100dp"
+                android:src="@drawable/morerate"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="5dp"
+                android:text="@{offersmodel.storename}"
+                android:layout_gravity="start" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@{offersmodel.name}"
+                android:gravity="center"
+                android:layout_gravity="end" />
+            <LinearLayout
+                android:id="@+id/priceslin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_gravity="start"
+                    android:textSize="10dp"
+                    android:text="@{offersmodel.oldprice}"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/customer_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_gravity="end"
+                    android:textSize="10dp"
+                    android:text="@{offersmodel.newprice}"
+                    android:textColor="@color/gray" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</layout>

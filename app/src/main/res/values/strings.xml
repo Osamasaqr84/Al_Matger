@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Al_Matger</string>
+    <string name="mainpage">القسم</string>
+    <string name="cancel">الغاء</string>
+    <string name="open_permission">فتح</string>
+    <string name="permission_text_cam">اعطاء الصلاحية لفتح الصور</string>
+    <string name="notselect">لم يتم تحديد الصور</string>
+    <string name="error">خطا في تحميل الصور</string>
+    <string name="complet">ادخل حجم منتج صحيح</string>
+    <string name="addcolortoproduct">اضافة الوان للمنتج</string>
+    <string name="addsizesrtoproduct">اضاقة احجام للمنتج</string>
+    <string name="code">الكود الخاص بالمشاهير : </string>
+    <string name="banky">تحويل بنكي</string>
+    <string name="card">بطاقة ائتمانية</string>
+    <string name="orderdetails">تفاصيل الطلبات</string>
+    <string name="deliveryname">اسم الكابتن : </string>
+    <string name="deliveryoffers">عروض المناديب</string>
+</resources>
