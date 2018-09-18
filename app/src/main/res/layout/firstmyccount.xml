@@ -59,13 +59,10 @@
                 />
         </LinearLayout>
 
-       <include layout="@layout/first_card_in_myaccount"/>
-        <include layout="@layout/second_card_in_myaccount"
-           />
-        <include layout="@layout/third_card_in_myaccount"
-            />
+        <include layout="@layout/first_card_in_myaccount"/>
+        <include layout="@layout/second_card_in_myaccount" />
+        <include layout="@layout/third_card_in_myaccount"  />
         <include layout="@layout/fourth_card_in_myaccount"/>
-
 
         <TextView
             android:id="@+id/save"
@@ -83,7 +80,6 @@
             android:background="@drawable/save_back"
             android:padding="2dp"
             android:layout_weight="1"/>
-
 
     </LinearLayout>
     </ScrollView>

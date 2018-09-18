@@ -16,4 +16,21 @@
     <string name="deliveryname">اسم الكابتن : </string>
     <string name="deliveryoffers">عروض المناديب</string>
     <string name="deliveryoffers5">عروض المناديب</string>
+    <string name="product_name">هاتف اونر 7 سي</string>
+    <string name="satisfied">الي اي مدي انت راضي</string>
+    <string name="writecomment">اكتب تعليقك</string>
+    <string name="sendrate">ارســــل</string>
+    <string name="prductrate">تقييم المنتج</string>
+    <string name="storename">اسم المتجر</string>
+    <string name="storeplace">مكان المتجر</string>
+    <string name="clientname">اسم العميل</string>
+    <string name="productname">اسم المنتج</string>
+    <string name="productprice">سعر المنتج</string>
+    <string name="paymentway">وسيلة الدفع</string>
+    <string name="accept">قبول</string>
+    <string name="refuse">رفض</string>
+    <string name="neworder">طلب جديد</string>
+    <string name="google_maps_key">AIzaSyDFi45bBEn44Oh7dNIryAZ5FBvEnKPqrz0</string>
+
+
 </resources>

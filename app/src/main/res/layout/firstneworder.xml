@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_home3"
+    android:orientation="vertical"
+  >
+
+    <include layout="@layout/header_for_neworder"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mapsss"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="220dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+      <!--  <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:enabled="true"
+            android:layout_height="200dp"
+            android:focusable="true" />-->
+
+        <include layout="@layout/first_card_in_new_order"/>
+       <include layout="@layout/second_card_in_new_order"/>
+       <include layout="@layout/third_card_in_new_order"/>
+       <include layout="@layout/fourth_card_in_new_order"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="@string/accept"
+                android:lines="1"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/accept_back"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="center"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="@string/refuse"
+                android:lines="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:onClick="showsizeslayout"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:background="@drawable/refuse_back"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
