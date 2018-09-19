@@ -57,8 +57,8 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
         , NavigationView.OnNavigationItemSelectedListener,
         View.OnClickListener
    {
-       private GoogleApiClient mGoogleApiClient;
 
+       private GoogleApiClient mGoogleApiClient;
        GoogleMap m_map;
        boolean mapReady = false;
        private BeanRoute routeClient;
@@ -68,11 +68,16 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
 
        double currentLatitude =29.990060, currentLongitude = 31.264525 ;
        double nextLatitude =30.107982, nextLongitude = 31.234092 ;
+       double thirdLatitude = 24.086299, thirdLongitude = 32.902680 ;
+
+
 
        @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,11 +90,15 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
             mGoogleApiClient.connect();
             //client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).addApi(Places.GEO_DATA_API).build();
         }
+
+
+
         MapFragment mMap = (MapFragment) getFragmentManager().findFragmentById(R.id.mapsss);
         //mMap.getMapAsync(this);
         mMap.getMapAsync(this);
 
     }
+
        protected synchronized void buildGoogleApi() {
            mGoogleApiClient = new GoogleApiClient.Builder(this)
                    .addConnectionCallbacks(this)
@@ -97,6 +106,7 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
                    .addApi(LocationServices.API)
                    .build();
        }
+
        public boolean servicesOK() {
            int isAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
            if (isAvailable == ConnectionResult.SUCCESS) {
@@ -109,14 +119,16 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
            }
            return false;
        }
+
        @Override
        public void onMapReady(GoogleMap googleMap) {
            mapReady = true;
            m_map = googleMap;
-           drawPathToClient();
+           drawPathToClient(currentLatitude,currentLongitude,nextLatitude,nextLongitude);
+           drawPathToClient(nextLatitude,nextLongitude,thirdLatitude,thirdLongitude);
        }
 
-       public void drawPathToClient() {
+       public void drawPathToClient(double lat1,double lang1,double lat2,double lang2) {
            new Json_Controller().GetDataFromServer(new VolleyCallback() {
                @Override
                public void onSuccess(String result) {
@@ -139,7 +151,7 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
                        lineOptionsClient.color(Color.RED);
                        if (lineOptionsClient != null && m_map != null) {
                            if(pointsClient.size()>=1) {
-                               m_map.clear();
+                              // m_map.clear();
                                m_map.addMarker(new MarkerOptions().position(pointsClient.get(pointsClient.size() - 1)));
                                m_map.addMarker(new MarkerOptions().position(pointsClient.get(0)));
                                polyLineClient = m_map.addPolyline(lineOptionsClient);
@@ -159,9 +171,9 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
                public void onError(VolleyError error) {
                }
            }, FirstNewOrder.this, "https://maps.googleapis.com/maps/api/directions/json?origin="
-                   + currentLatitude + "," + currentLongitude
-                   + "&destination=" + nextLatitude + ","
-                   + nextLongitude + "&sensor=false&key=" + getString(R.string.google_maps_key), false);
+                   + lat1 + "," + lang1
+                   + "&destination=" + lat2 + ","
+                   + lang2 + "&sensor=false&key=" + getString(R.string.google_maps_key), false);
        }
 
        public BeanRoute parseRoute(String response, BeanRoute routeBean) {
@@ -245,22 +257,18 @@ public class FirstNewOrder extends AppCompatActivity implements OnMapReadyCallba
 
        @Override
        public void onLocationChanged(Location location) {
-
        }
 
        @Override
        public void onStatusChanged(String provider, int status, Bundle extras) {
-
        }
 
        @Override
        public void onProviderEnabled(String provider) {
-
        }
 
        @Override
        public void onProviderDisabled(String provider) {
-
        }
 
        @Override

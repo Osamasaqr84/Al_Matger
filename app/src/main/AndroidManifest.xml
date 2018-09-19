@@ -15,13 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name=".FirstNewOrder.FirstNewOrder"
+        <activity android:name=".FirstStoreSettings.Activities.FirstStoreSettings"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
 
         <activity  android:name=".HomeActivity2.Activities.HomeActivity2" />
         <activity  android:name=".HomeActivity1.Activities.HomeActivity1" />
@@ -41,6 +46,7 @@
         <activity  android:name=".FirstMyAccount.Activities.FirstMyAccount"/>
         <activity  android:name=".FirstDeliveryOffers.Activities.FirstDeliveryOffers"/>
         <activity  android:name=".FirstProductRate.Activities.FirstProductRate"/>
+        <activity  android:name=".FirstNewOrder.FirstNewOrder"/>
 
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />

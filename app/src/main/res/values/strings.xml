@@ -31,6 +31,16 @@
     <string name="refuse">رفض</string>
     <string name="neworder">طلب جديد</string>
     <string name="google_maps_key">AIzaSyDFi45bBEn44Oh7dNIryAZ5FBvEnKPqrz0</string>
+    <string name="setting">الاعدادات</string>
+    <string name="get_deliveryvalue">تحصيل قيمة التوصيل</string>
+    <string name="enablecopon">تفعيل كوبونات التخفيض</string>
+    <string name="discounttext">تفعيل التخفيضات</string>
+    <string name="minorder">الحد الادني للطلب</string>
+    <string name="taxpercentage">نسبة الضريبة</string>
+    <string name="storedepart">قسم المتجر :</string>
+    <string name="changestorename">تغيير اسم المتجر</string>
+    <string name="copycode">تم نسخ الكود</string>
+    <string name="changestoredepart">تغيير قسم المتجر</string>
 
 
 </resources>
