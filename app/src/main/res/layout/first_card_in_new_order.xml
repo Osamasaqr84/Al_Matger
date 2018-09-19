@@ -13,6 +13,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/linear_background_for_new_order"
         android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/productname"
             android:layout_width="match_parent"
@@ -127,5 +128,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
