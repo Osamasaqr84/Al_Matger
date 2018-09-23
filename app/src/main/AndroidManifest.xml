@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name=".FirstStoreSettings.Activities.FirstStoreSettings"
+        <activity android:name=".FirstPhotographer_Details.Activities.FirstPhotographer_Details"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
 
-
+        <activity android:name=".FirstPhotographer_Details.Activities.DetailImageActivity" />
         <activity  android:name=".HomeActivity2.Activities.HomeActivity2" />
         <activity  android:name=".HomeActivity1.Activities.HomeActivity1" />
         <activity  android:name=".HomeActivity3.Activities.HomeActivity3"/>
@@ -47,6 +47,9 @@
         <activity  android:name=".FirstDeliveryOffers.Activities.FirstDeliveryOffers"/>
         <activity  android:name=".FirstProductRate.Activities.FirstProductRate"/>
         <activity  android:name=".FirstNewOrder.FirstNewOrder"/>
+        <activity  android:name=".FirstStoreSettings.Activities.FirstStoreSettings"/>
+        <activity  android:name=".FirstMyChats.Activities.FirstMyChatActivity"/>
+        <activity  android:name=".FirstNearest_Photographer.Activities.FirstNearest_photographer"/>
 
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />

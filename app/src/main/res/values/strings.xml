@@ -41,6 +41,15 @@
     <string name="changestorename">تغيير اسم المتجر</string>
     <string name="copycode">تم نسخ الكود</string>
     <string name="changestoredepart">تغيير قسم المتجر</string>
+    <string name="delivery_name">اسم المندوب : </string>
+    <string name="product_name_in_chat">اسم المنتج : </string>
+    <string name="mychat">محادثاتي</string>
+    <string name="photographer"> المصور : </string>
+    <string name="img_num">عدد الصور : </string>
+    <string name="chat">مراسلة</string>
+    <string name="photo_comments">تعليقات المصور</string>
+    <string name="nearphotographer">المصورين الاقرب</string>
+    <string name="photographerdetails">تفاصيل المصور</string>
 
 
 </resources>

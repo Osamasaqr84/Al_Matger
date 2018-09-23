@@ -2,18 +2,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_home3"
-    android:orientation="vertical"
-  >
+    android:orientation="vertical">
 
     <include layout="@layout/header_for_neworder"/>
-
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/mapsss"
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:layout_height="220dp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,14 +22,6 @@
         android:layoutDirection="rtl"
         android:layout_marginBottom="15dp"
         android:orientation="vertical">
-
-      <!--  <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
-            android:layout_width="match_parent"
-            android:clickable="true"
-            android:enabled="true"
-            android:layout_height="200dp"
-            android:focusable="true" />-->
 
         <include layout="@layout/first_card_in_new_order"/>
        <include layout="@layout/second_card_in_new_order"/>
