@@ -15,7 +15,6 @@ import android.view.WindowManager;
 
 import com.example.hossam.al_matger.FirstdealerAccount.Adapter.DepartmentAdapter;
 import com.example.hossam.al_matger.FirstdealerAccount.ViewModel.DepartmentViewModel;
-import com.example.hossam.al_matger.HomeActivity1.Fragments.MainFragment;
 import com.example.hossam.al_matger.R;
 
 import java.util.ArrayList;

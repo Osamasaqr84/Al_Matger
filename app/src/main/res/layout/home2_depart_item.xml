@@ -20,7 +20,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:src="@drawable/pharma"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_height="35dp"
         android:maxLines="1"
         android:padding="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:gravity="center_vertical"
         android:textStyle="bold"
         android:textSize="14dp"

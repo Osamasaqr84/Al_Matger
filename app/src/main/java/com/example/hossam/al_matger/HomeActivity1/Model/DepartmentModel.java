@@ -1,6 +1,7 @@
 package com.example.hossam.al_matger.HomeActivity1.Model;
 
 public class DepartmentModel {
+    // todo move entities package
 
     String name,imgpath;
 

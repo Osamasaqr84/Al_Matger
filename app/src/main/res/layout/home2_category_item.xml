@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data class="CategryPinding">
         <variable
@@ -9,32 +9,39 @@
             type="com.example.hossam.al_matger.HomeActivity2.ViewModel.CaegrytViewModel"/>
     </data>
 
-<android.support.constraint.ConstraintLayout
-     android:layout_width="wrap_content"
-    android:layout_marginRight="7dp"
-    android:layout_marginLeft="7dp"
-    android:layout_marginBottom="5dp"
-    android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/doctorlayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
 
         <ImageView
-            android:layout_width="120dp"
+            android:id="@+id/doctorimage"
+            android:layout_width="130dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_height="90dp"
+            android:padding="4dp"
             android:scaleType="fitXY"
-            android:src="@drawable/slider"/>
+            android:src="@drawable/slider"
+            />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:textStyle="bold"
-            android:gravity="center"
+            android:id="@+id/doctorname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doctorimage"
+            android:gravity="center_vertical|center"
+            android:textSize="12dp"
+            android:textColor="@color/red"
             android:text="@{categrymodel.name}"
-            android:textColor="@color/red"/>
-    </LinearLayout>
+            />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>

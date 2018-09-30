@@ -23,6 +23,7 @@ import com.example.hossam.al_matger.HomeActivity4.ViewModel.OffersViewModel;
 import com.example.hossam.al_matger.HomeActivity4.ViewModel.DepartmentViewModel;
 import com.example.hossam.al_matger.HomeActivity4.ViewModel.MoreRateViewModel;
 import com.example.hossam.al_matger.R;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

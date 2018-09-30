@@ -10,7 +10,7 @@ public class DepartmentViewModel {
 
     private ArrayList<DepartmentViewModel> items ;
     public MutableLiveData<ArrayList<DepartmentViewModel>> liveData = new MutableLiveData<>();
-    private DepartmentModel DepartmentModel;
+    private com.example.hossam.al_matger.HomeActivity4.Model.DepartmentModel DepartmentModel;
 
     String name,imgpath;
 

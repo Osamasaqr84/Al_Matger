@@ -65,7 +65,6 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Cu
             this.departBinding3 = departBinding3;
         }
 
-
         public void bind(DepartmentViewModel departmentViewModel)
         {
             this.departBinding3.setDepartmentmodel(departmentViewModel);

@@ -69,7 +69,7 @@ public class OffersViewModel {
     public MutableLiveData<ArrayList<OffersViewModel>> getData()
     {
         items = new ArrayList<>();
-        offerModel = new OfferModel("ايقون 6 ابيض","متاجر","35 ريال","40 ريال ");
+        offerModel = new OfferModel("ايقون 6 ابيض","متاجر","40 ريال","35 ريال ");
         OffersViewModel categoryViewModel = new OffersViewModel(offerModel);
         //CategoryViewModel categoryViewModel1 = new CategoryViewModel();
         items.add(categoryViewModel);

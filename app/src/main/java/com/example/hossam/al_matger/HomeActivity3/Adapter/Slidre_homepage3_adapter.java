@@ -14,13 +14,13 @@ import com.example.hossam.al_matger.R;
  * Created by mohammedsa on 25/02/2018.
  */
 
-public class Slidre4_home_adapter extends PagerAdapter {
+public class Slidre_homepage3_adapter extends PagerAdapter {
 
     private LayoutInflater inflater;
     private Context context;
     String link;
 
-    public Slidre4_home_adapter(Context context) {
+    public Slidre_homepage3_adapter(Context context) {
         this.context = context;
         inflater = LayoutInflater.from(context);
     }

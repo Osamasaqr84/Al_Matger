@@ -14,10 +14,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.hossam.al_matger.HomeActivity3.Adapter.DepartmentAdapter;
-import com.example.hossam.al_matger.HomeActivity3.Adapter.SliderPagerAdapter;
-import com.example.hossam.al_matger.HomeActivity3.Adapter.Slidre4_home_adapter;
+import com.example.hossam.al_matger.HomeActivity3.Adapter.Slidre_homepage3_adapter;
 import com.example.hossam.al_matger.HomeActivity3.ViewModel.DepartmentViewModel;
 import com.example.hossam.al_matger.R;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -34,14 +34,13 @@ public class MainFragment extends Fragment {
     private DepartmentAdapter customAdapter;
     private LinearLayout ll_dots;
     ViewPager viewPager;
-    private SliderPagerAdapter sliderPagerAdapter;
     private TextView[] dots;
     int page_position = 0,arraysize=0;
     String str_device;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     CirclePageIndicator indicator;
-    Slidre4_home_adapter viewadapter;
+    Slidre_homepage3_adapter viewadapter;
 
     public MainFragment() {
         // Required empty public constructor
@@ -70,7 +69,7 @@ public class MainFragment extends Fragment {
             }
         });
 
-        viewadapter=new Slidre4_home_adapter(getActivity());
+        viewadapter=new Slidre_homepage3_adapter(getActivity());
         viewPager.setAdapter(viewadapter);
         viewPager.setClipToPadding(false);
         viewPager.setPadding(120, 0, 120, 0);

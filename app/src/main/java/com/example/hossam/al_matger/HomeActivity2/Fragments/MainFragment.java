@@ -26,13 +26,13 @@ import com.example.hossam.al_matger.HomeActivity2.ViewModel.CaegrytViewModel;
 import com.example.hossam.al_matger.HomeActivity2.ViewModel.DepartmentViewModel;
 import com.example.hossam.al_matger.HomeActivity2.ViewModel.MoreRateViewModel;
 import com.example.hossam.al_matger.R;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
-
 
 public class MainFragment extends Fragment {
 

@@ -2,6 +2,7 @@ package com.example.hossam.al_matger.HomeActivity4.Adapter;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -80,6 +81,7 @@ public class OffersAdapter extends RecyclerView.Adapter<OffersAdapter.CustomView
         {
             this.categryPinding.setOffersmodel(categryViewModel);
             categryPinding.executePendingBindings();
+                categryPinding.itemNewprice.setPaintFlags(categryPinding.itemNewprice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         }
 
         public OfferDataPinding4  getCardBinding()

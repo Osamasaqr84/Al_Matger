@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data class="MorerateBinding4">
         <variable
@@ -8,83 +8,150 @@
             type="com.example.hossam.al_matger.HomeActivity4.ViewModel.MoreRateViewModel"/>
     </data>
 
-<android.support.constraint.ConstraintLayout
-    android:layout_width="150dp"
-    android:layout_height="wrap_content"
-    android:layout_marginRight="7dp"
-    android:layout_marginLeft="7dp"
-    android:padding="5dp"
-    android:background="@drawable/home1_dept_background"
-    >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:padding="5dp"
+        android:layoutDirection="rtl"
+        android:background="@drawable/linear_background_for_rate"
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:id="@+id/item_img"
+            android:layout_width="120dp"
             android:layout_height="100dp"
             android:src="@drawable/morerate"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:textSize="10dp"
-                android:layout_marginRight="5dp"
-                android:text="@{moreratemodel.depart}"
-               android:layout_gravity="start" />
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/item_dept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="10dp"
+            android:lines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:ellipsize="end"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@+id/item_img"
+            android:text="@{moreratemodel.depart}"
+            android:layout_gravity="start" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="9dp"
-
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_dept"
             android:text="@{moreratemodel.name}"
             android:gravity="center"
             android:layout_gravity="end" />
-        <LinearLayout
-            android:id="@+id/ratlin"
+
+        <RatingBar
+            android:id="@+id/rates"
+            style="@style/StarRatingBars"
             android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_name"
+            android:rating="@{moreratemodel.rate}"
+            android:isIndicator="true" />
+
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-           >
+            android:gravity="center"
+            android:lines="1"
+            android:layout_marginEnd="2dp"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/rates"
+            app:layout_constraintTop_toBottomOf="@+id/item_name"
+            android:text="(120)"
+            android:textColor="@color/gray" />
 
-            <RatingBar
-                android:id="@+id/rates"
-                style="@style/StarRatingBars"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:rating="@{moreratemodel.rate}"
-                android:isIndicator="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
-                android:gravity="center"
-                android:text="("
-                android:textColor="@color/gray" />
+    </android.support.constraint.ConstraintLayout>
+<!--<android.support.constraint.ConstraintLayout-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="7dp"-->
+    <!--android:layout_marginLeft="7dp"-->
+    <!--android:padding="5dp"-->
+    <!--android:background="@drawable/home1_dept_background"-->
+    <!--&gt;-->
 
-            <TextView
-                android:id="@+id/customer_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/gray" />
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=")"
-                android:textColor="@color/gray" />
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:src="@drawable/morerate"/>-->
 
-        </LinearLayout>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:textSize="10dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:text="@{moreratemodel.depart}"-->
+               <!--android:layout_gravity="start" />-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="9dp"-->
 
-    </LinearLayout>
+            <!--android:text="@{moreratemodel.name}"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_gravity="end" />-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ratlin"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+           <!--&gt;-->
 
-</android.support.constraint.ConstraintLayout>
+            <!--<RatingBar-->
+                <!--android:id="@+id/rates"-->
+                <!--style="@style/StarRatingBars"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:rating="@{moreratemodel.rate}"-->
+                <!--android:isIndicator="true" />-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="2dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="("-->
+                <!--android:textColor="@color/gray" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/customer_number"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/gray" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text=")"-->
+                <!--android:textColor="@color/gray" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+<!--</android.support.constraint.ConstraintLayout>-->
 </layout>

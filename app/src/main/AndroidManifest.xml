@@ -14,11 +14,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name=".FirstPhotographer_Details.Activities.FirstPhotographer_Details"
-            android:windowSoftInputMode="adjustResize" >
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".HomeActivity3.Activities.HomeActivity3"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,34 +28,43 @@
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-
         <activity android:name=".FirstPhotographer_Details.Activities.DetailImageActivity" />
-        <activity  android:name=".HomeActivity2.Activities.HomeActivity2" />
-        <activity  android:name=".HomeActivity1.Activities.HomeActivity1" />
-        <activity  android:name=".HomeActivity3.Activities.HomeActivity3"/>
-        <activity  android:name=".HomeActivity4.Activities.HomeActivity4"/>
-        <activity  android:name=".SecondSubCategry.Activities.SecondSubCategryActivity"/>
-        <activity  android:name=".FirstSubCategry.Activities.FirstSubCategryActivity"/>
-        <activity  android:name=".ThirdSubCategry.Activities.ThirdSubCategryActivity"/>
-        <activity  android:name=".FirstResturantList.Activities.FirstResturantListActivity"/>
-        <activity  android:name=".FirstProductDetails.Activities.FirstProductDetailsActivity"/>
-        <activity  android:name=".Orders.FirstConfirmOrder.Activities.FirstConfirmOrderActivity"/>
-        <activity  android:name=".Orders.FirstFinishMakeOrder.Activities.FirstFinishMakeOrderActivity"/>
-        <activity  android:name=".FirstProductCart.Activities.FirstProductCartActivity"/>
-        <activity  android:name=".FirstMyOrders.Activities.FirstMyOrdersActivity"/>
-        <activity  android:name=".FirstAddProductPackage.Activities.FirstAddProductActivity"/>
-        <activity  android:name=".FirstdealerAccount.Activities.FirstdealerAccount"/>
-        <activity  android:name=".FirstMyAccount.Activities.FirstMyAccount"/>
-        <activity  android:name=".FirstDeliveryOffers.Activities.FirstDeliveryOffers"/>
-        <activity  android:name=".FirstProductRate.Activities.FirstProductRate"/>
-        <activity  android:name=".FirstNewOrder.FirstNewOrder"/>
-        <activity  android:name=".FirstStoreSettings.Activities.FirstStoreSettings"/>
-        <activity  android:name=".FirstMyChats.Activities.FirstMyChatActivity"/>
-        <activity  android:name=".FirstNearest_Photographer.Activities.FirstNearest_photographer"/>
+        <activity android:name=".HomeActivity1.Activities.HomeActivity1" />
+        <activity android:name=".FirstStoreList.Activities.FirstStoreList" />
+        <activity android:name=".HomeActivity4.Activities.HomeActivity4" />
+        <activity android:name=".HomeActivity2.Activities.HomeActivity2" />
+        <activity android:name=".SecondSubCategry.Activities.SecondSubCategryActivity" />
+        <activity android:name=".FirstSubCategry.Activities.FirstSubCategryActivity" />
+        <activity android:name=".ThirdSubCategry.Activities.ThirdSubCategryActivity" />
+        <activity android:name=".FirstResturantList.Activities.FirstResturantListActivity" />
+        <activity android:name=".FirstProductDetails.Activities.FirstProductDetailsActivity" />
+        <activity android:name=".Orders.FirstConfirmOrder.Activities.FirstConfirmOrderActivity" />
+        <activity android:name=".Orders.FirstFinishMakeOrder.Activities.FirstFinishMakeOrderActivity" />
+        <activity android:name=".FirstProductCart.Activities.FirstProductCartActivity" />
+        <activity android:name=".FirstMyOrders.Activities.FirstMyOrdersActivity" />
+        <activity android:name=".FirstAddProductPackage.Activities.FirstAddProductActivity" />
+        <activity android:name=".FirstdealerAccount.Activities.FirstdealerAccount" />
+        <activity android:name=".FirstMyAccount.Activities.FirstMyAccount" />
+        <activity android:name=".FirstDeliveryOffers.Activities.FirstDeliveryOffers" />
+        <activity android:name=".FirstProductRate.Activities.FirstProductRate" />
+        <activity android:name=".FirstNewOrder.FirstNewOrder" />
+        <activity android:name=".FirstStoreSettings.Activities.FirstStoreSettings" />
+        <activity android:name=".FirstMyChats.Activities.FirstMyChatActivity" />
+        <activity android:name=".FirstNearest_Photographer.Activities.FirstNearest_photographer" />
+        <activity android:name=".FirstPhotographer_Details.Activities.FirstPhotographer_Details" />
+        <activity android:name=".FirstPhotographerComments.Activities.FirstPhotographerCommentsActivity" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b1a071ee6c852956ac6fd3305a4c7c10ca07e420"
+            />
     </application>
 
 </manifest>

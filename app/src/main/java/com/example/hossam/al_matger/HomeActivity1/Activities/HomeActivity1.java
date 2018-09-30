@@ -9,8 +9,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.hossam.al_matger.HomeActivity1.Fragments.MainFragment;
-import com.example.hossam.al_matger.R;
+import com.example.hossam.al_matger.HomeActivity1.Fragments.MainFragment;import com.example.hossam.al_matger.R;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 

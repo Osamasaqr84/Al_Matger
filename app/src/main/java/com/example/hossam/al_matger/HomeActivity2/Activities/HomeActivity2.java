@@ -1,5 +1,6 @@
 package com.example.hossam.al_matger.HomeActivity2.Activities;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,11 +12,18 @@ import android.view.WindowManager;
 import com.example.hossam.al_matger.HomeActivity2.Fragments.MainFragment;
 import com.example.hossam.al_matger.R;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class HomeActivity2 extends AppCompatActivity {
 
     Fragment fragment;
     FragmentManager fr;
     FragmentTransaction ft;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
