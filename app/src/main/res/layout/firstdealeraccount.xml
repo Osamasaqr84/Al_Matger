@@ -1,61 +1,45 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_home3"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-  >
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layoutDirection="rtl"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical">
+        <include
+            android:id="@+id/header1"
+            layout="@layout/header_for_dealeraccount"/>
 
-        <include layout="@layout/header_for_dealeraccount"/>
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/header"
+            android:id="@+id/codeview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_margin="7dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/linear_background_for_subcat"
-            app:layout_constraintTop_toTopOf="@+id/head1" >
-
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="7dp"
-                android:orientation="horizontal">
+            app:layout_constraintTop_toBottomOf="@+id/header1" >
 
                 <TextView
+                    android:id="@+id/code_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/code"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     android:textColor="@color/black"
                     android:textSize="16dp"
                     />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4jisdfdds"
+                    app:layout_constraintStart_toEndOf="@id/code_txt"
+                    app:layout_constraintTop_toTopOf="parent"
                     android:textColor="@color/black"
                     android:layout_marginStart="5dp"
                     android:textSize="15dp"
                     />
-
-            </LinearLayout>
 
             <ImageView
                 android:id="@+id/st2"
@@ -69,19 +53,17 @@
                 />
 
         </android.support.constraint.ConstraintLayout>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/account_recycler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="5dp"
             android:layoutDirection="locale"
             android:orientation="horizontal"
             app:layoutManager="LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@+id/description" />
+            app:layout_constraintTop_toBottomOf="@+id/codeview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
-
-    </LinearLayout>
-
-    </ScrollView>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

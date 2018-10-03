@@ -26,7 +26,6 @@ import java.util.ArrayList;
 public class SliderPagerAdapter extends PagerAdapter {
     private Context activity;
 
-
     public SliderPagerAdapter(Context context) {
         activity=context;
       //  mValues=data;

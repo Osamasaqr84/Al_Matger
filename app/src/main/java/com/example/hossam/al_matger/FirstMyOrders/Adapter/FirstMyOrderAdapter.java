@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.hossam.al_matger.FirstMyOrders.ViewModel.MyOrders_ItemViewModel;
-import com.example.hossam.al_matger.FirstProductCart.ViewModel.Cart_ItemViewModel;
 import com.example.hossam.al_matger.R;
 import com.example.hossam.al_matger.databinding.MyOrdersBinding;
 
@@ -27,7 +26,6 @@ public class FirstMyOrderAdapter extends RecyclerView.Adapter<FirstMyOrderAdapte
         this.context =  context;
     }
 
-
     @NonNull
     @Override
     public CustomView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,7 +36,7 @@ public class FirstMyOrderAdapter extends RecyclerView.Adapter<FirstMyOrderAdapte
 
         }
 
-        MyOrdersBinding myOrdersBinding = DataBindingUtil.inflate(layoutInflater, R.layout.first_myorder_adapter_item,parent,false);
+        MyOrdersBinding myOrdersBinding = DataBindingUtil.inflate(layoutInflater, R.layout.first_myorder_adapter_item2,parent,false);
         return new CustomView(myOrdersBinding);
     }
 

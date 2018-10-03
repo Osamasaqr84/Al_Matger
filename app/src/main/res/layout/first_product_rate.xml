@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include  layout="@layout/header_for_product_rate"/>
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_for_product_rate"/>
 
         <ImageView
             android:layout_marginTop="20dp"
-            android:id="@+id/doctot_rateimg"
+            android:id="@+id/item_rateimg"
             android:layout_width="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.35"
+            app:layout_constraintTop_toBottomOf="@+id/header"
             android:layout_gravity="center"
-            android:layout_height="200dp"
+            android:layout_height="0dp"
             android:src="@drawable/mobile"
             />
 
@@ -25,8 +31,13 @@
             android:id="@+id/rate_productname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_rateimg"
             android:textColor="@color/black"
             android:text="@string/product_name"
             android:textSize="16dp"/>
@@ -36,16 +47,23 @@
             android:id="@+id/rate_ordernum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rate_productname"
             android:textColor="@color/gray"
             android:text="طلب رقم : 155 "
             android:textSize="16dp"/>
         <TextView
+            android:id="@+id/ratetxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rate_ordernum"
             android:text="@string/satisfied"
             android:textSize="15dp" />
 
@@ -54,19 +72,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
             android:rating="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratetxt"
             android:theme="@style/RatingBar"
             android:numStars="5"/>
 
 
         <EditText
             android:id="@+id/ratecomment"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:minLines="2"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratebare"
             android:gravity="center"
             android:hint="@string/writecomment"/>
 
@@ -74,12 +96,15 @@
             android:id="@+id/ratesend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratecomment"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:text="@string/sendrate"
             android:textSize="20dp"
-            android:layout_margin="10dp"
+            android:layout_margin="15dp"
             android:onClick="sendfedback"
             android:textColor="@color/white"
             android:background="@drawable/btn_borderrate"/>
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -37,7 +37,7 @@ public class FirstSubCatAdapter extends RecyclerView.Adapter<FirstSubCatAdapter.
 
         }
 
-        SubCategry1Binding subCategry1Binding = DataBindingUtil.inflate(layoutInflater, R.layout.first_subcategry_adapter_item,parent,false);
+        SubCategry1Binding subCategry1Binding = DataBindingUtil.inflate(layoutInflater, R.layout.first_subcategry_adapter_item2,parent,false);
         return new CustomView(subCategry1Binding);
     }
 

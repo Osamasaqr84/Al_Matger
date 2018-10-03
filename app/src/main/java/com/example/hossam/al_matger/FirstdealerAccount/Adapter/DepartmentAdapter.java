@@ -36,7 +36,6 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Cu
         if(layoutInflater == null)
         {
             layoutInflater = LayoutInflater.from(parent.getContext());
-
         }
 
         DealerAcountBinding cardBinding = DataBindingUtil.inflate(layoutInflater, R.layout.dealer_account_model,parent,false);

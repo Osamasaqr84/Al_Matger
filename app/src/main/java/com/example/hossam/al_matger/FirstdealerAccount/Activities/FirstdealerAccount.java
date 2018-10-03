@@ -41,7 +41,6 @@ public class FirstdealerAccount extends AppCompatActivity {
         recyclerView = findViewById(R.id.account_recycler);
         departmentViewModel = new DepartmentViewModel();
 
-
         departmentViewModel.getData().observe(this, new Observer<ArrayList<DepartmentViewModel>>() {
             @Override
             public void onChanged(@Nullable ArrayList<DepartmentViewModel> arrayList) {

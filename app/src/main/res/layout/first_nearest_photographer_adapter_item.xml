@@ -10,214 +10,314 @@
             type="com.example.hossam.al_matger.FirstNearest_Photographer.ViewModel.Nearest_PhotographerViewModel"/>
     </data>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/linear_background_for_photographer"
-    android:weightSum="5"
-    android:layoutDirection="rtl"
-    android:layout_marginBottom="10dp">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="5dp"
-        android:layout_weight="2.2">
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="95dp"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"
-                android:scaleType="fitXY"
-                android:layout_gravity="center"
-                android:src="@drawable/camera"/>
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/ratlin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="3dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <RatingBar
-                android:id="@+id/rates"
-                style="@style/StarRatingBars"
-                android:layout_width="wrap_content"
-                android:layout_height="15dp"
-                android:rating="5"
-                android:isIndicator="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
-                android:gravity="center"
-                android:text="("
-                android:textSize="11dp"
-                android:textColor="@color/gray" />
-
-            <TextView
-                android:id="@+id/customer_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="11dp"
-                android:text="@{nearestphotographer.ratecount}"
-                android:textColor="@color/gray" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=")"
-                android:textSize="11dp"
-                android:textColor="@color/gray" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="12dp"
-            android:textColor="#4A4A4A"
-            android:autoLink="all"
-            android:layout_marginBottom="2dp"
-            android:clickable="true"
-            android:layout_marginRight="2dp"
-            android:text="@string/photo_comments"
-            />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="#D9D9D9"/>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2.8"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="1dp"
-                android:textSize="14sp"
-                android:textColor="#4A4A4A"
-                android:text="@string/photographer"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="1dp"
-                android:textSize="14sp"
-                android:textColor="#4A4A4A"
-                android:text="@{nearestphotographer.name}"
-                />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="2dp"
-            android:textSize="14dp"
-            android:textColor="#4A4A4A"
-            android:layout_marginRight="2dp"
-            android:text="@{nearestphotographer.description}"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="35dp"
-            android:background="#D9D9D9"/>
-
-        <android.support.constraint.ConstraintLayout
-        android:id="@+id/header"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layoutDirection="rtl"
+        android:background="@drawable/linear_background_for_photographer"
         >
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:gravity="center"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.3"
-                    android:text="@string/img_num"
-                    android:gravity="start"
-                    android:textColor="#969696"
-                    android:textSize="13dp" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guid23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45"
+            />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="450"
-                    android:padding="2dp"
-                    android:gravity="start"
-                    android:textColor="@color/red"
-                    android:textSize="13dp" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:text="@string/chat"
-                android:lines="1"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="5dp"
-                android:textColor="@color/white"
-                android:layout_gravity="center|bottom"
-                android:background="@drawable/accept_background"
-                android:paddingRight="12dp"
-                android:paddingLeft="12dp"
-                />
-        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.Guideline
+            android:id="@+id/guidvertical2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50"
+            />
 
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/gray"
+            app:layout_constraintWidth_percent="0.05"
+            app:layout_constraintEnd_toStartOf="@id/guidvertical2"
+            app:layout_constraintStart_toEndOf="@+id/guid23"
+            />
 
 
-    </LinearLayout>
-</LinearLayout>
+        <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/camera"/>
+
+
+        <RatingBar
+            android:id="@+id/rates"
+            style="@style/StarRatingBars"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:isIndicator="true"
+            android:rating="5"
+            app:layout_constraintStart_toEndOf="@+id/vertical1"
+            app:layout_constraintTop_toBottomOf="@+id/item_img" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/vertical1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"
+
+            />
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="@+id/guid23"
+           app:layout_constraintTop_toBottomOf="@+id/item_img"
+            app:layout_constraintStart_toEndOf="@id/rates"
+            android:text="(12056565)"
+        android:textSize="11dp"
+        android:textColor="@color/gray" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="(120 120120120120120120120)"
+            android:textColor="@color/gray"
+            android:textSize="11dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="@+id/guid23"
+            app:layout_constraintStart_toEndOf="@+id/vertical1"
+            app:layout_constraintTop_toBottomOf="@+id/rates" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:background="@drawable/linear_background_for_photographer"-->
+    <!--android:weightSum="5"-->
+    <!--android:layoutDirection="rtl"-->
+    <!--android:layout_marginBottom="10dp">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_weight="2.2">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--&gt;-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="95dp"-->
+                <!--android:padding="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@drawable/camera"/>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ratlin"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<RatingBar-->
+                <!--android:id="@+id/rates"-->
+                <!--style="@style/StarRatingBars"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="15dp"-->
+                <!--android:rating="5"-->
+                <!--android:isIndicator="true"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="2dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="("-->
+                <!--android:textSize="11dp"-->
+                <!--android:textColor="@color/gray" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/customer_number"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:textSize="11dp"-->
+                <!--android:text="@{nearestphotographer.ratecount}"-->
+                <!--android:textColor="@color/gray" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text=")"-->
+                <!--android:textSize="11dp"-->
+                <!--android:textColor="@color/gray" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="12dp"-->
+            <!--android:textColor="#4A4A4A"-->
+            <!--android:autoLink="all"-->
+            <!--android:layout_marginBottom="2dp"-->
+            <!--android:clickable="true"-->
+            <!--android:layout_marginRight="2dp"-->
+            <!--android:text="@string/photo_comments"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#D9D9D9"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="2.8"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="7dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="1dp"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="#4A4A4A"-->
+                <!--android:text="@string/photographer"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="1dp"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="#4A4A4A"-->
+                <!--android:text="@{nearestphotographer.name}"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="2dp"-->
+            <!--android:textSize="14dp"-->
+            <!--android:textColor="#4A4A4A"-->
+            <!--android:layout_marginRight="2dp"-->
+            <!--android:text="@{nearestphotographer.description}"-->
+            <!--/>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginTop="35dp"-->
+            <!--android:background="#D9D9D9"/>-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="5dp"-->
+        <!--android:layoutDirection="rtl"-->
+        <!--&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_margin="5dp"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="0.3"-->
+                    <!--android:text="@string/img_num"-->
+                    <!--android:gravity="start"-->
+                    <!--android:textColor="#969696"-->
+                    <!--android:textSize="13dp" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:text="450"-->
+                    <!--android:padding="2dp"-->
+                    <!--android:gravity="start"-->
+                    <!--android:textColor="@color/red"-->
+                    <!--android:textSize="13dp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:text="@string/chat"-->
+                <!--android:lines="1"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_gravity="center|bottom"-->
+                <!--android:background="@drawable/accept_background"-->
+                <!--android:paddingRight="12dp"-->
+                <!--android:paddingLeft="12dp"-->
+                <!--/>-->
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+
+
+
+    <!--</LinearLayout>-->
+<!--</LinearLayout>-->
 </layout>

@@ -43,7 +43,6 @@ public class FirstDeliveryOffers extends AppCompatActivity {
         deliveryOffersViewModel.getData().observe(this, new Observer<ArrayList<DeliveryOffersViewModel>>() {
             @Override
             public void onChanged(@Nullable ArrayList<DeliveryOffersViewModel> arrayList) {
-
                 departmentAdapter = new DeliveryOffersAdapter(FirstDeliveryOffers.this,arrayList);
                 recyclerView.setLayoutManager(new GridLayoutManager(FirstDeliveryOffers.this,1));
                 recyclerView.setAdapter(departmentAdapter);
